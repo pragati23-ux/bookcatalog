@@ -1,0 +1,169 @@
+ .book{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ body{
+  background-color:#beef00;
+ }
+ .hex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }
+ .navbar{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 80px;
+  font-size: larger;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+
+ }
+  a {  
+    
+    color: #1400c6;
+  text-decoration: none;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.carousel,
+.box {
+  width: 80vw;
+  min-width: 200px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.box {
+ 
+   margin-left:140px ;
+  position: relative;
+  overflow: hidden;
+}
+
+.box img[data-active="true"] {
+  opacity: 1;
+}
+
+.box img[data-active="false"] {
+  opacity: 0;
+}
+
+.main img {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  min-width: 200px;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  border-radius: 6px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.6s linear;
+}
+
+ .next,
+.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: rgba(30, 30, 30, 0.7);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.prev {
+  left: 110px;
+}
+
+.next {
+top: 50%;
+  right: -160px;
+}
+
+.next:hover,
+.prev:hover {
+  background: black;
+  color: #fff;
+  transform: translateY(-60%) scale(1.1);
+}
+.show {
+  animation: showAnimation 1s ease-in-out forwards;
+  z-index: 3;
+  opacity: 1 !important;
+}
+
+.hide {
+  animation: hideAnimation 1s ease-in-out forwards;
+  z-index: 2;
+  opacity: 0;
+}
+
+@keyframes showAnimation {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hideAnimation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}  
+ .stepper {
+  position: absolute; /* Positions the stepper relative to its parent (.carousel) */
+  bottom: 15px; /* Places it 15px from the bottom */
+  left: 64%; /* Starts it from the horizontal center */
+  transform: translateX(-70%); /* Shifts it back by half its width to perfectly center it */
+  display: flex;
+  gap: 8px; /* Space between the buttons */
+  z-index: 10; /* Ensures it's on top of the slides */
+}
+
+/* Styles for the stepper buttons */
+.stepper button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: whitesmoke; /* Semi-transparent white for better visibility on images */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  font-size: 0; /* Hide the number */
+  line-height: 0;
+}
+
+/* Hover effect */
+.stepper button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Active state for the current slide's button */
+.stepper button.active {
+  background-color: #fff;
+  border-color: #fff;
+  transform: scale(1.2); /* Make it slightly larger */
+}

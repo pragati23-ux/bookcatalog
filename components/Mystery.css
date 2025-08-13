@@ -1,0 +1,25 @@
+.mystery-page {
+  padding: 2rem;
+  background:   #12343b;
+  color: #e0e0e0;
+  font-family: 'Merriweather', serif;
+}
+
+.quote4 {
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #bbb;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-card4{
+  padding: 1rem;
+  border: 1px solid darkblue;
+  border-radius: 8px;
+  background-color: #2c2b2b;
+}

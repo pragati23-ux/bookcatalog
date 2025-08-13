@@ -1,0 +1,25 @@
+.thriller-page {
+  padding: 2rem;
+  background: linear-gradient(to right, #1c1c1c, #434343);
+  color: #f0f0f0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.quote3 {
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-card3 {
+  padding: 1rem;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+}

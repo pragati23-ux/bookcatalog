@@ -1,0 +1,25 @@
+.romance-page {
+  padding: 2rem;
+  background:  red;
+  color: black;
+  font-family: 'Playfair Display', serif;
+}
+
+.quote2 {
+  font-style: italic;
+  margin-bottom: 2rem;
+  color:black;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-card2 {
+  padding: 1rem;
+  border: 1px solid #d8a7a7;
+  border-radius: 8px;
+  background-color: #fffafc;
+}

@@ -1,0 +1,24 @@
+.adventurous-page {
+  padding: 2rem;
+  background:  Green;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: darkblue;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-card {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
